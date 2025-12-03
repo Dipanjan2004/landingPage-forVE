@@ -57,10 +57,10 @@ const CTASection = () => {
         
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 drop-shadow-lg px-2 sm:px-0">
           Ready to Launch Your{' '}
-          <span className="text-highlight drop-shadow-md">AI Chatbot?</span>
+          <span className="text-highlight drop-shadow-md">Chatbot?</span>
         </h2>
         <p className="text-sm sm:text-base md:text-lg text-white/90 mb-5 sm:mb-6 max-w-xl mx-auto leading-relaxed px-4 sm:px-0">
-          Join thousands of businesses using ChatFlow AI. Get started in 24 hours.
+          Join thousands of businesses using ChatFlow. Get started in 24 hours.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button className="group bg-white text-primary px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-gray-100 transition-all duration-200 shadow-xl hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2 w-full sm:w-auto">

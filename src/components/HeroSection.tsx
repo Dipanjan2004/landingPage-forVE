@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import Orb from './Orb';
 
 const HeroSection = () => {
   const heroRef = useRef<HTMLElement>(null);
@@ -31,7 +32,13 @@ const HeroSection = () => {
       }
 
       if (ctaRef.current) {
-        gsap.from(ctaRef.current.children, {
+        const buttons = ctaRef.current.children;
+        Array.from(buttons).forEach((button) => {
+          (button as HTMLElement).style.opacity = '1';
+          (button as HTMLElement).style.visibility = 'visible';
+        });
+        
+        gsap.from(buttons, {
           y: 30,
           opacity: 0,
           duration: 0.8,
@@ -64,24 +71,35 @@ const HeroSection = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
         
         <div className="absolute top-32 right-20 w-16 h-16 bg-primary/20 rounded-lg rotate-45 animate-float" style={{ animationDelay: '0s' }}></div>
         <div className="absolute bottom-40 left-20 w-12 h-12 bg-secondary/20 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/3 right-1/4 w-8 h-8 bg-accent/30 rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
+
+      <div className="absolute inset-0 overflow-hidden z-[1]">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-[600px] sm:max-w-[700px] md:max-w-[800px] h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] opacity-30 sm:opacity-40 md:opacity-50 pointer-events-auto">
+          <Orb
+            hoverIntensity={2.0}
+            rotateOnHover={true}
+            hue={0}
+            forceHoverState={false}
+          />
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center relative z-10">
-        <div className="text-center lg:text-left relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+        <div className="text-center lg:text-left relative z-20">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-primary/20 mb-6 shadow-lg">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-            <span className="text-sm font-semibold text-primary">AI-Powered Customer Support</span>
+            <span className="text-sm font-semibold text-primary">Intelligent Customer Support</span>
           </div>
           
           <h1
             ref={headingRef}
-            className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6"
+            className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6 drop-shadow-lg"
           >
-            AI Chatbots That{' '}
+            Chatbots That{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
               Transform
             </span>{' '}
@@ -89,28 +107,34 @@ const HeroSection = () => {
           </h1>
           <p
             ref={subheadingRef}
-            className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0"
+            className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0 font-medium drop-shadow-md"
           >
-            Provide 24/7 support, generate leads, and automate customer interactions with AI-powered chatbots.
+            Provide 24/7 support, generate leads, and automate customer interactions with intelligent chatbots.
           </p>
-          <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button className="bg-primary text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto">
+          <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start relative z-30">
+            <button 
+              className="bg-primary text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-opacity-90 transition-all duration-200 shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto backdrop-blur-sm relative z-30"
+              style={{ opacity: 1, visibility: 'visible' }}
+            >
               Get Started
             </button>
-            <button className="bg-white text-primary border-2 border-primary px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-primary hover:text-white transition-all duration-200 shadow-md hover:shadow-lg w-full sm:w-auto">
+            <button 
+              className="bg-white/90 backdrop-blur-sm text-primary border-2 border-primary px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-primary hover:text-white transition-all duration-200 shadow-lg hover:shadow-xl w-full sm:w-auto relative z-30"
+              style={{ opacity: 1, visibility: 'visible' }}
+            >
               Watch Demo
             </button>
           </div>
         </div>
 
-        <div ref={chatMockRef} className="flex justify-center lg:justify-end relative z-10">
+        <div ref={chatMockRef} className="flex justify-center lg:justify-end relative z-20">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl -z-10 transform scale-110"></div>
           
           <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-4 sm:p-6 space-y-3 sm:space-y-4 border border-gray-100 relative mx-auto lg:mx-0">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-tr-2xl pointer-events-none"></div>
             <div className="flex items-center gap-3 pb-4 border-b border-gray-200">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-xl">
-                AI
+CF
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900">ChatFlow Assistant</h3>

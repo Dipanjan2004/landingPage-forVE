@@ -50,7 +50,7 @@ const FAQSection = () => {
     {
       question: 'Can the chatbot be trained on my business data?',
       answer:
-        'Yes! ChatFlow AI specializes in custom training. Upload your documents, knowledge base, product catalogs, and FAQs. Our AI learns from your data to provide accurate, context-aware responses.',
+        'Yes! ChatFlow specializes in custom training. Upload your documents, knowledge base, product catalogs, and FAQs. Our system learns from your data to provide accurate, context-aware responses.',
     },
     {
       question: 'What languages are supported?',
@@ -114,7 +114,7 @@ const FAQSection = () => {
               </span>
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-xl mx-auto px-4 sm:px-0">
-              Everything you need to know about ChatFlow AI
+              Everything you need to know about ChatFlow
             </p>
           </div>
         </div>

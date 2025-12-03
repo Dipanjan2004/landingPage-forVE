@@ -84,7 +84,7 @@ const WhyUsSection = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 sm:mb-3 px-2 sm:px-0">
               Why Choose{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                ChatFlow AI
+                ChatFlow
               </span>
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-xl mx-auto px-4 sm:px-0">
@@ -135,7 +135,7 @@ const WhyUsSection = () => {
                         Feature
                       </th>
                       <th className="px-3 sm:px-4 md:px-6 py-3 sm:py-4 text-center text-white font-semibold text-xs sm:text-sm md:text-base">
-                        ChatFlow AI
+                        ChatFlow
                       </th>
                       <th className="px-3 sm:px-4 md:px-6 py-3 sm:py-4 text-center text-white font-semibold text-xs sm:text-sm md:text-base">
                         Generic Providers

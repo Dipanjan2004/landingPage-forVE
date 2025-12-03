@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className="fixed top-0 left-0 right-0 z-[9999] bg-white shadow-lg border-b border-gray-200"
+      className="fixed top-0 left-0 right-0 z-[9999] bg-white/70 backdrop-blur-xl shadow-lg border-b border-gray-200/50"
       style={{ 
         position: 'fixed',
         top: 0,
@@ -44,15 +44,15 @@ const Navbar = () => {
         opacity: 1,
         visibility: 'visible',
         display: 'block',
-        backgroundColor: 'rgba(255, 255, 255, 0.98)',
-        backdropFilter: 'blur(10px)',
+        backgroundColor: 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: 'blur(20px)',
       }}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
           <div className="flex-shrink-0">
             <a href="#home" className="text-xl sm:text-2xl md:text-3xl font-bold" style={{ color: '#E2852E' }}>
-              ChatFlow AI
+ChatFlow
             </a>
           </div>
 

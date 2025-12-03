@@ -73,10 +73,10 @@ const Footer = () => {
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                 <span className="text-white font-bold text-xl">CF</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white">ChatFlow AI</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">ChatFlow</h3>
             </div>
             <p className="text-gray-400 mb-4 max-w-md leading-relaxed text-sm sm:text-base">
-              Transform your customer support with AI-powered chatbots. Train on your
+              Transform your customer support with intelligent chatbots. Train on your
               data, deploy in 24 hours, and scale effortlessly.
             </p>
             <div className="flex gap-3">
@@ -183,7 +183,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm flex items-center gap-2">
-              <span>© {new Date().getFullYear()} ChatFlow AI. All rights reserved.</span>
+              <span>© {new Date().getFullYear()} ChatFlow. All rights reserved.</span>
             </p>
             <div className="flex items-center gap-4 text-sm">
               <span className="text-gray-400 flex items-center gap-2">

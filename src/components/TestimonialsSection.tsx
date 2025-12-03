@@ -50,7 +50,7 @@ const TestimonialsSection = () => {
       role: 'CEO',
       company: 'TechStart Inc.',
       quote:
-        'ChatFlow AI reduced our response time from hours to seconds and cut support costs by 65%. The ROI was immediate.',
+        'ChatFlow reduced our response time from hours to seconds and cut support costs by 65%. The ROI was immediate.',
       avatar: '👩‍💼',
     },
     {
@@ -117,7 +117,7 @@ const TestimonialsSection = () => {
               </span>
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-xl mx-auto px-4 sm:px-0">
-              See what our customers have to say about ChatFlow AI
+              See what our customers have to say about ChatFlow
             </p>
           </div>
         </div>

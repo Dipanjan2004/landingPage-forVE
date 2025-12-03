@@ -26,7 +26,7 @@ const PricingSection = () => {
       description: 'Perfect for small businesses getting started',
       features: [
         'Up to 1,000 conversations/month',
-        'Basic AI training',
+        'Basic training',
         'Email support',
         'Website integration',
         'Basic analytics',
@@ -41,7 +41,7 @@ const PricingSection = () => {
       description: 'Ideal for growing businesses',
       features: [
         'Up to 10,000 conversations/month',
-        'Advanced AI training',
+        'Advanced training',
         'Priority support',
         'Multi-channel integration',
         'Advanced analytics',
@@ -59,7 +59,7 @@ const PricingSection = () => {
       description: 'For large organizations with custom needs',
       features: [
         'Unlimited conversations',
-        'Custom AI model training',
+        'Custom model training',
         '24/7 dedicated support',
         'All integrations',
         'Custom analytics & reporting',

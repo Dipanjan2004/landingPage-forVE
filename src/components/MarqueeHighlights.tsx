@@ -23,14 +23,14 @@ const MarqueeHighlights = () => {
   }, []);
 
   const highlights = [
-    '24/7 AI Support',
+    '24/7 Support',
     'Reduce Support Costs by 60%',
     'Train on Your Own Data',
     'Multi-language Chatbots',
     'Instant Response Time',
     'Seamless Integration',
     'Advanced Analytics',
-    'Custom AI Training',
+    'Custom Training',
   ];
 
   const duplicatedHighlights = [...highlights, ...highlights];
