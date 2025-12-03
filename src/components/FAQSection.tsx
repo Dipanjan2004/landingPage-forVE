@@ -43,44 +43,44 @@ const FAQSection = () => {
 
   const faqs: FAQItem[] = [
     {
-      question: 'How quickly can I get started with ChatFlow AI?',
+      question: 'How quickly can I get started?',
       answer:
-        'You can get started in as little as 24 hours! Our onboarding process is streamlined and includes data training, integration setup, and initial configuration. Most businesses are up and running within 1-2 business days.',
+        'You can get started in 24 hours! Our streamlined onboarding includes data training, integration setup, and configuration. Most businesses are operational within 1-2 business days.',
     },
     {
-      question: 'Can the chatbot be trained on my specific business data?',
+      question: 'Can the chatbot be trained on my business data?',
       answer:
-        'Yes! ChatFlow AI specializes in custom training. You can upload your documents, knowledge base, product catalogs, FAQs, and any other business-specific information. Our AI will learn from your data to provide accurate, context-aware responses.',
+        'Yes! ChatFlow AI specializes in custom training. Upload your documents, knowledge base, product catalogs, and FAQs. Our AI learns from your data to provide accurate, context-aware responses.',
     },
     {
       question: 'What languages are supported?',
       answer:
-        'Our chatbots support over 50 languages out of the box. For Starter plans, you can choose one language. Growth and Enterprise plans include multi-language support, allowing your chatbot to communicate with customers in their preferred language.',
+        'Our chatbots support over 50 languages. Starter plans include one language, while Growth and Enterprise plans offer multi-language support.',
     },
     {
-      question: 'How does pricing work? Are there any hidden fees?',
+      question: 'How does pricing work?',
       answer:
-        'Our pricing is completely transparent with no hidden fees. Plans are based on conversation volume per month. Starter is $99/month for up to 1,000 conversations, Growth is $299/month for up to 10,000 conversations, and Enterprise offers custom pricing for unlimited conversations. All plans include standard features with no additional charges.',
+        'Transparent pricing with no hidden fees. Starter: $99/month (1,000 conversations), Growth: $299/month (10,000 conversations), Enterprise: Custom pricing (unlimited). All plans include standard features.',
     },
     {
-      question: 'Can I integrate ChatFlow AI with my existing tools?',
+      question: 'Can I integrate with existing tools?',
       answer:
-        'Absolutely! ChatFlow AI integrates seamlessly with popular CRMs (Salesforce, HubSpot), helpdesk tools (Zendesk, Freshdesk), messaging platforms (Slack, Microsoft Teams), and e-commerce platforms. We also provide APIs and webhooks for custom integrations.',
+        'Absolutely! Integrate with CRMs (Salesforce, HubSpot), helpdesk tools (Zendesk, Freshdesk), messaging platforms (Slack, Teams), and e-commerce platforms. APIs and webhooks available for custom integrations.',
     },
     {
       question: 'What kind of support do you provide?',
       answer:
-        'Starter plans include email support with 48-hour response time. Growth plans get priority support with faster response times and a dedicated account manager. Enterprise customers receive 24/7 dedicated support with a dedicated team and SLA guarantees.',
+        'Starter: Email support (48hr response). Growth: Priority support + dedicated account manager. Enterprise: 24/7 dedicated support with SLA guarantees.',
     },
     {
-      question: 'Is my data secure and private?',
+      question: 'Is my data secure?',
       answer:
-        'Security is our top priority. We use bank-level encryption, are GDPR compliant, and are SOC 2 Type II certified. Your data is never shared with third parties, and you maintain full ownership of all your information. Enterprise plans can also opt for on-premise deployment.',
+        'Yes! Bank-level encryption, GDPR compliant, SOC 2 Type II certified. Your data is never shared with third parties. Enterprise plans can opt for on-premise deployment.',
     },
     {
-      question: 'What happens if I exceed my conversation limit?',
+      question: 'What if I exceed my conversation limit?',
       answer:
-        'If you exceed your monthly conversation limit, we\'ll notify you and offer options to upgrade your plan or purchase additional conversation credits. We never cut off service abruptly - we work with you to find the best solution for your needs.',
+        'We\'ll notify you and offer options to upgrade or purchase additional credits. We never cut off service abruptly and work with you to find the best solution.',
     },
   ];
 
@@ -92,26 +92,31 @@ const FAQSection = () => {
     <section
       id="faq"
       ref={sectionRef}
-      className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-highlight/20 via-white to-accent/10"
+      className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-highlight/20 via-white to-accent/10 relative overflow-hidden"
     >
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-10 md:mb-12">
-          <div className="inline-block px-4 py-2 rounded-full bg-accent/20 text-primary font-semibold text-sm mb-4">
-            ❓ Got Questions?
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/2 left-0 w-72 h-72 bg-highlight/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/2 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+      </div>
+      <div className="max-w-4xl mx-auto relative z-10">
+        <div className="text-center mb-6 sm:mb-8 relative">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3">
-            Frequently Asked{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-              Questions
-            </span>
-          </h2>
-          <p className="text-lg md:text-xl text-gray-600 mb-2">
-            Everything you need to know about ChatFlow AI
-          </p>
-          <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto">
-            Click on any question below to reveal the answer. Can't find what you're looking for? 
-            <a href="#contact" className="text-primary hover:underline ml-1">Contact our support team</a>.
-          </p>
+          <div className="relative z-10">
+            <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-accent/30 to-primary/20 text-primary font-semibold text-xs sm:text-sm mb-3 sm:mb-4 shadow-lg">
+              ❓ Got Questions?
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 sm:mb-3 px-2 sm:px-0">
+              Frequently Asked{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                Questions
+              </span>
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-xl mx-auto px-4 sm:px-0">
+              Everything you need to know about ChatFlow AI
+            </p>
+          </div>
         </div>
 
         <div ref={itemsRef} className="space-y-3" style={{ opacity: 1 }}>
@@ -120,15 +125,15 @@ const FAQSection = () => {
               key={index}
               className={`bg-white rounded-xl border-2 transition-all duration-300 overflow-hidden group ${
                 openIndex === index
-                  ? 'border-primary shadow-xl bg-gradient-to-br from-highlight/20 to-white'
-                  : 'border-gray-200 hover:border-primary/50 shadow-md hover:shadow-lg'
+                  ? 'border-primary shadow-xl bg-gradient-to-br from-highlight/20 to-white scale-[1.01]'
+                  : 'border-gray-200 hover:border-primary/50 shadow-md hover:shadow-lg hover:scale-[1.01]'
               }`}
               style={{ opacity: 1, transform: 'translateY(0)' }}
             >
               <button
                 onClick={() => toggleFAQ(index)}
                 type="button"
-                className="w-full px-5 py-4 text-left flex items-center justify-between focus:outline-none group-hover:bg-gray-50/50 transition-colors"
+                className="w-full px-4 sm:px-5 py-3 sm:py-4 text-left flex items-center justify-between focus:outline-none group-hover:bg-gray-50/50 transition-colors"
               >
                 <div className="flex items-center gap-3 flex-1">
                   <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
@@ -167,7 +172,7 @@ const FAQSection = () => {
                   opacity: openIndex === index ? 1 : 0,
                 }}
               >
-                <div className="px-5 pb-5 ml-11 text-gray-600 leading-relaxed border-l-2 border-primary/20 pl-4 text-sm md:text-base">
+                <div className="px-4 sm:px-5 pb-4 sm:pb-5 ml-8 sm:ml-11 text-gray-600 leading-relaxed border-l-2 border-primary/20 pl-3 sm:pl-4 text-xs sm:text-sm md:text-base">
                   {faq.answer}
                 </div>
               </div>

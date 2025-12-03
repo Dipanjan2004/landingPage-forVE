@@ -63,19 +63,19 @@ const Footer = () => {
     <footer
       id="contact"
       ref={footerRef}
-      className="bg-gray-900 text-gray-300 py-12 md:py-16 px-4 sm:px-6 lg:px-8 relative z-10"
+      className="bg-gray-900 text-gray-300 py-10 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 relative z-10"
       style={{ opacity: 1, transform: 'translateY(0)' }}
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 mb-6 sm:mb-8">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                 <span className="text-white font-bold text-xl">CF</span>
               </div>
-              <h3 className="text-2xl font-bold text-white">ChatFlow AI</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">ChatFlow AI</h3>
             </div>
-            <p className="text-gray-400 mb-4 max-w-md leading-relaxed">
+            <p className="text-gray-400 mb-4 max-w-md leading-relaxed text-sm sm:text-base">
               Transform your customer support with AI-powered chatbots. Train on your
               data, deploy in 24 hours, and scale effortlessly.
             </p>

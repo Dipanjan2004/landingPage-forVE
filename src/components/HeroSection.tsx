@@ -59,7 +59,7 @@ const HeroSection = () => {
     <section
       id="home"
       ref={heroRef}
-      className="min-h-screen flex items-center justify-center pt-24 md:pt-28 pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-highlight/20 to-accent/10 relative overflow-hidden"
+      className="min-h-[90vh] sm:min-h-screen flex items-center justify-center pt-20 sm:pt-24 md:pt-28 pb-8 sm:pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-highlight/20 to-accent/10 relative overflow-hidden"
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
@@ -70,7 +70,7 @@ const HeroSection = () => {
         <div className="absolute bottom-40 left-20 w-12 h-12 bg-secondary/20 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/3 right-1/4 w-8 h-8 bg-accent/30 rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center relative z-10">
         <div className="text-center lg:text-left relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
@@ -79,7 +79,7 @@ const HeroSection = () => {
           
           <h1
             ref={headingRef}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6"
+            className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6"
           >
             AI Chatbots That{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
@@ -89,16 +89,15 @@ const HeroSection = () => {
           </h1>
           <p
             ref={subheadingRef}
-            className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0"
           >
-            Provide 24/7 support, generate leads, and automate customer interactions
-            with AI-powered chatbots trained on your business data.
+            Provide 24/7 support, generate leads, and automate customer interactions with AI-powered chatbots.
           </p>
           <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button className="bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105">
+            <button className="bg-primary text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto">
               Get Started
             </button>
-            <button className="bg-white text-primary border-2 border-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary hover:text-white transition-all duration-200 shadow-md hover:shadow-lg">
+            <button className="bg-white text-primary border-2 border-primary px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-primary hover:text-white transition-all duration-200 shadow-md hover:shadow-lg w-full sm:w-auto">
               Watch Demo
             </button>
           </div>
@@ -107,7 +106,7 @@ const HeroSection = () => {
         <div ref={chatMockRef} className="flex justify-center lg:justify-end relative z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl -z-10 transform scale-110"></div>
           
-          <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-6 space-y-4 border border-gray-100 relative">
+          <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-4 sm:p-6 space-y-3 sm:space-y-4 border border-gray-100 relative mx-auto lg:mx-0">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-tr-2xl pointer-events-none"></div>
             <div className="flex items-center gap-3 pb-4 border-b border-gray-200">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-xl">
@@ -119,7 +118,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div className="space-y-4 h-64 overflow-y-auto">
+            <div className="space-y-3 sm:space-y-4 h-48 sm:h-56 md:h-64 overflow-y-auto">
               <div className="flex gap-2">
                 <div className="w-8 h-8 rounded-full bg-accent flex-shrink-0"></div>
                 <div className="bg-gray-100 rounded-2xl rounded-tl-none px-4 py-2 max-w-[80%]">
@@ -146,14 +145,14 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div className="flex gap-2 pt-4 border-t border-gray-200">
+            <div className="flex gap-2 pt-3 sm:pt-4 border-t border-gray-200">
               <input
                 type="text"
                 placeholder="Type your message..."
-                className="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary"
+                className="flex-1 px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary"
                 disabled
               />
-              <button className="bg-primary text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition-colors">
+              <button className="bg-primary text-white px-4 sm:px-6 py-2 rounded-full hover:bg-opacity-90 transition-colors text-sm sm:text-base">
                 Send
               </button>
             </div>

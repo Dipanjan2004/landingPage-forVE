@@ -32,7 +32,7 @@ const CTASection = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary via-secondary to-highlight relative overflow-hidden"
+      className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary via-secondary to-highlight relative overflow-hidden"
     >
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-20 overflow-hidden">
@@ -55,22 +55,21 @@ const CTASection = () => {
           </div>
         </div>
         
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 drop-shadow-lg px-2 sm:px-0">
           Ready to Launch Your{' '}
           <span className="text-highlight drop-shadow-md">AI Chatbot?</span>
         </h2>
-        <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Join thousands of businesses using ChatFlow AI to transform their customer
-          support and drive growth. Get started in 24 hours.
+        <p className="text-sm sm:text-base md:text-lg text-white/90 mb-5 sm:mb-6 max-w-xl mx-auto leading-relaxed px-4 sm:px-0">
+          Join thousands of businesses using ChatFlow AI. Get started in 24 hours.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="group bg-white text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-200 shadow-xl hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2">
+          <button className="group bg-white text-primary px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-gray-100 transition-all duration-200 shadow-xl hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2 w-full sm:w-auto">
             <span>Start Free Trial</span>
-            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </button>
-          <button className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary transition-all duration-200 flex items-center justify-center gap-2">
+          <button className="bg-transparent text-white border-2 border-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-white hover:text-primary transition-all duration-200 flex items-center justify-center gap-2 w-full sm:w-auto">
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -78,7 +77,7 @@ const CTASection = () => {
             <span>Schedule a Demo</span>
           </button>
         </div>
-        <p className="text-white/80 text-sm mt-6">
+        <p className="text-white/80 text-xs sm:text-sm mt-4 sm:mt-6 px-4 sm:px-0">
           No credit card required • 14-day free trial • Cancel anytime
         </p>
       </div>

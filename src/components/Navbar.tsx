@@ -48,10 +48,10 @@ const Navbar = () => {
         backdropFilter: 'blur(10px)',
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
           <div className="flex-shrink-0">
-            <a href="#home" className="text-2xl md:text-3xl font-bold" style={{ color: '#E2852E' }}>
+            <a href="#home" className="text-xl sm:text-2xl md:text-3xl font-bold" style={{ color: '#E2852E' }}>
               ChatFlow AI
             </a>
           </div>
@@ -68,7 +68,7 @@ const Navbar = () => {
               </a>
             ))}
             <button 
-              className="px-6 py-2 rounded-full font-semibold hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl text-white"
+              className="px-4 sm:px-6 py-1.5 sm:py-2 rounded-full font-semibold text-sm sm:text-base hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl text-white"
               style={{ backgroundColor: '#E2852E' }}
             >
               Get Started
@@ -109,21 +109,21 @@ const Navbar = () => {
         </div>
 
         {isOpen && (
-          <div className="md:hidden pb-4">
-            <div className="flex flex-col space-y-4">
+          <div className="md:hidden pb-4 animate-fadeIn">
+            <div className="flex flex-col space-y-3 sm:space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+                  className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-base sm:text-lg py-1"
                   style={{ color: '#374151' }}
                 >
                   {link.name}
                 </a>
               ))}
               <button 
-                className="px-6 py-2 rounded-full font-semibold hover:opacity-90 transition-all duration-200 w-full text-white"
+                className="px-6 py-2.5 rounded-full font-semibold hover:opacity-90 transition-all duration-200 w-full text-white text-base"
                 style={{ backgroundColor: '#E2852E' }}
               >
                 Get Started

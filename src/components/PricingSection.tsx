@@ -122,39 +122,45 @@ const PricingSection = () => {
     <section
       id="pricing"
       ref={sectionRef}
-      className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white"
+      className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-accent/5 to-white relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-10 md:mb-12">
-          <div className="inline-block px-4 py-2 rounded-full bg-accent/20 text-primary font-semibold text-sm mb-6">
-            💰 Flexible Plans
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-6 sm:mb-8 relative">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Simple, Transparent{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-              Pricing
-            </span>
-          </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-2">
-            Choose the plan that fits your business needs
-          </p>
-          <p className="text-base text-gray-500 max-w-xl mx-auto">
-            All plans include a 14-day free trial. No credit card required. Cancel anytime.
-          </p>
+          <div className="relative z-10">
+            <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-secondary/20 to-highlight/20 text-primary font-semibold text-xs sm:text-sm mb-3 sm:mb-4 shadow-lg">
+              💰 Flexible Plans
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 sm:mb-3 px-2 sm:px-0">
+              Simple, Transparent{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                Pricing
+              </span>
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-xl mx-auto px-4 sm:px-0">
+              Choose the plan that fits your business. 14-day free trial. No credit card required.
+            </p>
+          </div>
         </div>
 
         <div
           ref={cardsRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-8 max-w-6xl mx-auto"
           style={{ opacity: 1 }}
         >
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              className={`relative rounded-2xl p-6 md:p-8 shadow-lg transition-all duration-300 ${
+              className={`relative rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-lg transition-all duration-300 ${
                 plan.featured
-                  ? 'bg-gradient-to-br from-primary to-secondary text-white border-4 border-secondary md:scale-105 z-10'
-                  : 'bg-white text-gray-900 border border-gray-200 hover:shadow-2xl'
+                  ? 'bg-gradient-to-br from-primary to-secondary text-white border-2 sm:border-4 border-secondary lg:scale-105 z-10 hover:scale-110'
+                  : 'bg-white text-gray-900 border border-gray-200 hover:shadow-2xl hover:scale-105'
               }`}
               style={{ opacity: 1, transform: 'translateY(0) scale(1)' }}
             >
@@ -169,16 +175,16 @@ const PricingSection = () => {
                 <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full blur-xl opacity-50"></div>
               )}
 
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                <p className={`text-sm ${plan.featured ? 'text-white/90' : 'text-gray-600'}`}>
+              <div className="mb-4 sm:mb-6">
+                <h3 className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">{plan.name}</h3>
+                <p className={`text-xs sm:text-sm ${plan.featured ? 'text-white/90' : 'text-gray-600'}`}>
                   {plan.description}
                 </p>
               </div>
 
-              <div className="mb-6">
+              <div className="mb-4 sm:mb-6">
                 <div className="flex items-baseline">
-                  <span className="text-4xl md:text-5xl font-bold">{plan.price}</span>
+                  <span className="text-3xl sm:text-4xl md:text-5xl font-bold">{plan.price}</span>
                   {plan.period && (
                     <span className={`ml-2 text-lg ${plan.featured ? 'text-white/80' : 'text-gray-600'}`}>
                       {plan.period}
@@ -187,7 +193,7 @@ const PricingSection = () => {
                 </div>
               </div>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-2">
                     <svg
@@ -213,7 +219,7 @@ const PricingSection = () => {
               </ul>
 
               <button
-                className={`w-full py-3 rounded-full font-semibold transition-all duration-200 flex items-center justify-center gap-2 ${
+                className={`w-full py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 ${
                   plan.featured
                     ? 'bg-white text-primary hover:bg-gray-100 shadow-lg'
                     : 'bg-primary text-white hover:bg-opacity-90 shadow-md hover:shadow-lg'
